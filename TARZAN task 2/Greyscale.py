@@ -7,20 +7,20 @@ image = cv2.imread("photo.jpg")
  # orignal image display
 cv2.imshow("Original ", image) 
 
-cv2.waitKey(0)  # Wait for key press 
+cv2.waitKey(0)  
 cv2.destroyAllWindows()
 
  # image ko Resize kiya -> 800*600
 image = cv2.resize(image, (800, 600)) 
 cv2.imshow("Resized", image)
 
-cv2.waitKey(0)  # Wait for key press
+cv2.waitKey(0) 
 cv2.destroyAllWindows()
 
 # Step 2: Convert to grayscale (800x600)
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Grayscale", gray_image)
-cv2.waitKey(0)  # Wait for key press
+cv2.waitKey(0)  
 cv2.destroyAllWindows()
 
 # Step 3: Reduce resolution (Resizing grayscale image)
