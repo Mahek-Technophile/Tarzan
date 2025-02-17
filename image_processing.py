@@ -26,12 +26,10 @@ def preprocess_image(image_path, output_dir="output_images"):
     # Step 4: Normalize to range [0,1]
     normalized_image = resized_image / 255.0
     print("Step 4: Normalized [0,1]", normalized_image)
-    np.save(os.path.join(output_dir, "step4_normalized_0_to_1.npy"), normalized_image)
-    
+
     # Step 5: Optional - Normalize to range [-1,1]
     normalized_minus_one_to_one = (normalized_image * 2) - 1
     print("Step 5: Normalized [-1,1]", normalized_minus_one_to_one)
-    np.save(os.path.join(output_dir, "step5_normalized_minus1_to_1.npy"), normalized_minus_one_to_one)
     
     cv2.waitKey(0)
     cv2.destroyAllWindows()
